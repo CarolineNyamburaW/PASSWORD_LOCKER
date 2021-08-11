@@ -34,4 +34,3 @@ class TestPassword(unittest.TestCase):
         tearDown is a method that cleans up after each teat runs.
         """
         User.user_list = []
-
