@@ -18,6 +18,15 @@ class TestPassword(unittest.TestCase):
             """
             self.new_user.save_user() # saves the new user
             self.assertEqual(len(User.user_list),1)
+    
+    def test_save_multiple_user(self):
+            """
+            checks if we can save multiple users
+            """
 
+            self.new_user.save_user()
+            second_user = User("leen","green","k2r$678") # new user
+            second_user.save_user()
+            self.assertEqual(len(User.user_list),2)
 
 
