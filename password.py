@@ -18,4 +18,14 @@ class User:
          this method saves contact objects into user_list
          """
 
-         User.user_list.append(self)     
+         User.user_list.append(self)  
+
+      @classmethod
+      def find_user_by_password(cls,password):
+        """
+        this method takes in a password and returns a password that matches tha password.
+        """
+
+        for user in cls.user_list:
+            if user.password == password:
+                return user   
