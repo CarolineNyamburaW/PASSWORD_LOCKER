@@ -84,3 +84,9 @@ class Credential:
         for credential in cls.credential_list:
             if credential.username == username:
                 return credential
+    
+    def delete_credential(self):
+        """
+        this method deletes a credential from the credentila_list
+        """
+        Credential.credential_list.remove(self)
