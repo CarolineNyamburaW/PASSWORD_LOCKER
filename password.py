@@ -61,3 +61,11 @@ class Credential:
     """
 
     credential_list= []
+
+    def __init__(self,Account,username,password):
+        """
+        _init_ a method that helps to define properties for our objects.
+        """
+        self.Account = Account
+        self.username = username
+        self.password = password
