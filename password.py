@@ -90,3 +90,15 @@ class Credential:
         this method deletes a credential from the credentila_list
         """
         Credential.credential_list.remove(self)
+
+    @classmethod 
+    def credential_exists(cls,username):
+        """
+        this method checks if a credential exists fro the credential_list
+        """
+        for credential in cls.credential_list:
+            if credential.username == username:
+                return True
+
+        return False 
+
