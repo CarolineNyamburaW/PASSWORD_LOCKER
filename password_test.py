@@ -34,3 +34,17 @@ class TestPassword(unittest.TestCase):
         tearDown is a method that cleans up after each teat runs.
         """
         User.user_list = []
+
+        
+    def test_find_user_by_password(self):
+            """
+            method checks if we can find a user by password
+            """
+
+            self.new_user.save_user()
+            second_user = User("leen","green","k2r$678") # new user
+            second_user.save_user()
+
+            found_user = User.find_user_by_password("k2r$678")
+            self.assertEqual(found_user.password,second_user.password)
+
