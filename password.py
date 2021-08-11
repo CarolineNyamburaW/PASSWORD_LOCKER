@@ -102,3 +102,11 @@ class Credential:
 
         return False 
 
+    @classmethod
+    def display_credential(cls):
+        """
+        this method returns the credential  list
+        """
+        return cls.credential_list
+
+
