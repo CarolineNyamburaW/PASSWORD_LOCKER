@@ -54,3 +54,10 @@ class User:
         this method returns the user list
         """
         return cls.user_list
+
+class Credential:
+    """
+    a class that generates new instances of credentials
+    """
+
+    credential_list= []
