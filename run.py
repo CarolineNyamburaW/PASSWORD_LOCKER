@@ -32,3 +32,24 @@ def display_user():
     """
     return User.display_user()
 
+
+def create_new_credential(Account,username,password):
+    """
+    function that creates new credential for a given user account
+    """
+
+    new_credential = Credential(Account,username,password)
+    return new_credential
+
+def save_credential(credential):
+    """
+    function to save credential 
+    """
+
+    credential.save_credential()
+
+def delete_credential(credential):
+    """
+    function to delete a credential
+    """
+    credential.delete_credential()
