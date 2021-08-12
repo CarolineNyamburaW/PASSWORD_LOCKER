@@ -112,4 +112,17 @@ class TestCredential(unittest.TestCase):
         tearDown is a method that cleans up after each teat runs.
         """
         Credential.credential_list = []
+        
+    def test_find_credential_by_username(self):
+        """
+        method checks if we can find a credential by username
+        """
+        self.new_credential.save_credential()
+        second_credential = Credential("Instagram","nimoh916","nims65$*")
+        second_credential.save_credential()
+
+        found_credential = Credential.find_credential_by_username("nimoh916")
+        self.assertEqual(found_credential.username,second_credential.username)
+
+
  
