@@ -124,16 +124,18 @@ class TestCredential(unittest.TestCase):
         found_credential = Credential.find_credential_by_username("nimoh916")
         self.assertEqual(found_credential.username,second_credential.username)
 
-    def test_delete_credential(self):
+    def test_credential_exists(self):
         """
-        this method tests whether we can remove a credential from our credentail list.
+        tests to check if we can return a boolean if we cannot find the credential
         """
         self.new_credential.save_credential()
         second_credential = Credential("Instagram","nimoh916","nims65$*")
         second_credential.save_credential()
 
-        self.new_credential.delete_credential()
-        self.assertEqual(len(Credential.credential_list),1)
+        credential_exists = Credential.credential_exists("nimoh916")
+        self.assertTrue(credential_exists)
+
+
 
 
  
