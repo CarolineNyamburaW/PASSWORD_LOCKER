@@ -57,3 +57,15 @@ class TestPassword(unittest.TestCase):
 
             self.new_user.delete_user()
             self.assertEqual(len(User.user_list),1)
+
+    def test_user_exists(self):
+            """
+            tests to check if we can return a boolean if we cannot find the user
+            """
+            self.new_user.save_user()
+            second_user = User("Victor","Kamau","#Brother2001") # new user
+            second_user.save_user()
+
+
+            user_exists = User.user_exists("#Brother2001")
+            self.assertTrue(user_exists)
