@@ -33,6 +33,8 @@ def display_user():
     return User.display_user()
 
 
+
+
 def create_new_credential(Account,username,password):
     """
     function that creates new credential for a given user account
@@ -53,3 +55,21 @@ def delete_credential(credential):
     function to delete a credential
     """
     credential.delete_credential()
+
+def find_credential(username):
+    """
+    function that finds a user by password and returns the credential
+    """
+    return Credential.find_credential(username)
+
+def display_credential():
+    """
+    function that finds a credential
+    """
+    return Credential.display_credential()    
+
+def credential_exists(account):
+    """
+    Function that check if a Credentials exists with that account name and return true or false
+    """
+    return Credential.if_credential_exists(account)
