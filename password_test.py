@@ -69,3 +69,17 @@ class TestPassword(unittest.TestCase):
 
             user_exists = User.user_exists("#Brother2001")
             self.assertTrue(user_exists)
+
+    
+    def test_display_all_users(self):
+            """
+            this method returns a list of all users saved
+            """
+            self.assertEqual(User.display_user(),User.user_list)
+
+class TestCredential(unittest.TestCase):
+
+    def setUp(self):
+        self.new_credential = Credential("Account","br254","nims67&")
+        
+   
