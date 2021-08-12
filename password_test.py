@@ -97,4 +97,14 @@ class TestCredential(unittest.TestCase):
         self.new_credential.save_credential() # saves the new list
         self.assertEqual(len(Credential.credential_list),1)
 
+    def test_save_multiple_credential(self):
+        """
+        checks if we can save multiple credentials
+        """
+
+        self.new_credential.save_credential()
+        second_credential = Credential("Instagram","nimoh916","nims65$*")
+        second_credential.save_credential()
+        self.assertEqual(len(Credential.credential_list),2)
+
    
