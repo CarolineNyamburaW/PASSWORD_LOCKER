@@ -107,4 +107,9 @@ class TestCredential(unittest.TestCase):
         second_credential.save_credential()
         self.assertEqual(len(Credential.credential_list),2)
 
-   
+    def tearDown(second_credential):
+        """
+        tearDown is a method that cleans up after each teat runs.
+        """
+        Credential.credential_list = []
+ 
