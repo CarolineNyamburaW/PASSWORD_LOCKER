@@ -19,3 +19,16 @@ def del_user(user):
     function to delete a user
     """
     user.delete_user()
+
+def find_user(password):
+    """
+    function that finds a user by password and returns the user
+    """
+    return User.find_user_by_password(password)
+
+def display_user():
+    """
+    function to display user
+    """
+    return User.display_user()
+
